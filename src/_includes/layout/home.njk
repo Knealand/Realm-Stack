@@ -1,0 +1,47 @@
+---
+layout: /layout/base.njk
+---
+<!-- Banner Section -->
+<div class="banner">
+        <img src="https://placehold.co/600x400" alt="Banner Image" class="w-full object-cover h-64 sm:h-72 md:h-96 lg:h-128">
+</div>
+<!-- Navbar Section -->
+<nav class="bg-[#58180D] text-white">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between">
+            <div class="flex space-x-4">
+                <!-- Primary Navbar items -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#" class="py-5 px-3 text-gray-300 hover:text-gray-900">Home</a>
+                    <a href="#" class="py-5 px-3 text-gray-300 hover:text-gray-900">About</a>
+                    <a href="#" class="py-5 px-3 text-gray-300 hover:text-gray-900">Services</a>
+                    <a href="#" class="py-5 px-3 text-gray-300 hover:text-gray-900">Contact</a>
+                </div>
+            </div>
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button class="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu hidden md:hidden">
+        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-700">Home</a>
+        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-700">About</a>
+        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-700">Services</a>
+        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-700">Contact</a>
+    </div>
+</nav>
+
+
+
+<script>
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>

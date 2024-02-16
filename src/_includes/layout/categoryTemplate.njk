@@ -1,0 +1,7 @@
+{% for item in items %}
+  {% if item.type === 'directory' %}
+    <button><a href="{{ item.path }}/index.html">{{ item.name }}</a></button>
+  {% else %}
+    <a href="{{ item.path }}">{{ item.name }}</a>
+  {% endif %}
+{% endfor %}
